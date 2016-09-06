@@ -9,7 +9,7 @@
 
 // #define DEBUG
 
-#define N 101
+#define N 102
 
 char* add(char* a, char* b) {
     char* temp = (char*)malloc(N * sizeof(char));
@@ -161,17 +161,21 @@ int main() {
             pivot_b = 2;
         }
 
+        if(pivot_a == 0) {
+            pivot_a = 1;
+        }
+
         printf("%d\n", pivot_b - pivot_a);
 
     }    
 
-    for(i = 0; i < fibs_length; i++) {
-        free(fibs[i]);
-    }
-    free(fibs);
-    free(num_a);
-    free(num_b);
-    free(pivot);
+    // for(i = 0; i < fibs_length; i++) {
+        // free(fibs[i]);
+    // }
+    // free(fibs);
+    // free(num_a);
+    // free(num_b);
+    // free(pivot);
 
     return 0;
 }
